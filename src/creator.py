@@ -3,6 +3,8 @@ from utils.docs_loader import load_markdown_documents
 
 import os
 os.environ["TRUST_REMOTE_CODE"] = "true"
+os.environ["HF_HUB_OFFLINE"] = "1"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
 
 ## Инициализация с FAISS
 # faiss_manager = VectorDBManager(
@@ -23,8 +25,7 @@ chroma_manager = VectorDBManager(
     embedding_kwargs={
         # "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
         "model_name": "sentence-transformers/all-MiniLM-L6-v2",
-        "model_kwargs": {"device": "cpu"},
-        "trust_remote_code": True,
+        "model_kwargs": {"device": "cuda"},
     }
 )
 
