@@ -1,5 +1,5 @@
 from sentence_transformers import SentenceTransformer
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from embeddings.base import BaseEmbedding
 
 

@@ -1,6 +1,7 @@
 from embeddings.huggingface import HuggingFaceEmbedding
 from utils.decorators import measure_time
 
+
 class EmbeddingFactory:
 
     @staticmethod
