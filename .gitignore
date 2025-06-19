@@ -12,6 +12,7 @@ wheels/
 
 .DS_Store
 vector_store
-logs/app.log
+src/logs/app.log
 logs/debug.log
+.env
 

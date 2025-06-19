@@ -38,3 +38,26 @@
 2025-06-19 11:05:05,621 - uvicorn.error - INFO - Waiting for application shutdown.
 2025-06-19 11:05:05,622 - uvicorn.error - INFO - Application shutdown complete.
 2025-06-19 11:05:05,622 - uvicorn.error - INFO - Finished server process [1167]
+2025-06-19 14:08:04,716 - uvicorn.error - INFO - Started server process [2516]
+2025-06-19 14:08:04,717 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-19 14:08:04,717 - uvicorn.error - INFO - Application startup complete.
+2025-06-19 14:08:04,717 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-19 14:08:23,770 - uvicorn.access - INFO - 127.0.0.1:50267 - "POST /search/ HTTP/1.1" 200
+2025-06-19 14:10:12,858 - uvicorn.error - INFO - Shutting down
+2025-06-19 14:10:12,961 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-19 14:10:12,962 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-19 14:10:12,962 - uvicorn.error - INFO - Finished server process [2516]
+2025-06-19 14:14:59,484 - uvicorn.error - INFO - Started server process [2654]
+2025-06-19 14:14:59,485 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-19 14:14:59,485 - uvicorn.error - INFO - Application startup complete.
+2025-06-19 14:14:59,485 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-19 14:15:06,773 - uvicorn.error - WARNING - Invalid HTTP request received.
+2025-06-19 14:17:22,082 - uvicorn.access - INFO - 127.0.0.1:50292 - "POST /search/ HTTP/1.1" 200
+2025-06-19 14:19:03,552 - uvicorn.access - INFO - 127.0.0.1:50297 - "POST /search/ HTTP/1.1" 200
+2025-06-19 14:44:39,051 - uvicorn.access - INFO - 127.0.0.1:50374 - "POST /search/ HTTP/1.1" 200
+2025-06-19 14:51:05,578 - uvicorn.access - INFO - 127.0.0.1:50388 - "POST /search/ HTTP/1.1" 200
+2025-06-19 14:52:43,177 - uvicorn.access - INFO - 127.0.0.1:50395 - "POST /search/ HTTP/1.1" 200
+2025-06-19 14:54:20,820 - uvicorn.access - INFO - 127.0.0.1:50398 - "POST /search/ HTTP/1.1" 200
+2025-06-19 14:56:51,887 - uvicorn.access - INFO - 127.0.0.1:50403 - "POST /search/ HTTP/1.1" 200
+2025-06-19 14:57:39,081 - uvicorn.access - INFO - 127.0.0.1:50406 - "POST /search/ HTTP/1.1" 200
+2025-06-19 15:00:04,465 - uvicorn.access - INFO - 127.0.0.1:50425 - "POST /search/ HTTP/1.1" 200

@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from typing import List
-from config import logger
+from config import logger, settings
 from schemas.faiss import SearchResult, SearchRequest
 import uvicorn
 from creator import manager
@@ -28,8 +28,8 @@ if __name__ == "__main__":
     try:
         uvicorn.run(
             app,
-            host="127.0.0.1",
-            # port=settings.app_port,
+            host=settings.app_host,
+            port=settings.app_port,
             log_config="src/logs/log_config.json",
             use_colors=True,
             log_level="info",
