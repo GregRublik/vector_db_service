@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     app_port: int = 8000
     app_host: str = "127.0.0.1"
 
+    url_ranpod: str = Field(json_schema_extra={'.env': 'URL_RANPOD'})
     api_key_ranpod: str = Field(json_schema_extra={'.env': 'API_KEY_RANPOD'})
     api_token_telegram: str = Field(json_schema_extra={'.env': 'API_TOKEN_TELEGRAM'})
 

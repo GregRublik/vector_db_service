@@ -36,37 +36,25 @@ async def echo_handler(message: Message) -> None:
         context = await context.json()
         print(f"context response - {context}")
 
-        # response = await session.post(
-        #     url=f"https://api.runpod.ai/v2/9llhrlx4fxvhr0/runsync/",
-        #     headers={
-        #         "Content-Type": "application/json",
-        #         "Authorization": f"Bearer {settings.api_key_ranpod}"
-        # },
-        #     json={
-        #         "input": {
-        #             "prompt": f"Вопрос: {message.text}\nКонтекст: {context}",
-        #         }
-        #     }
-        # )
-        # print(f"response llm - {await response.json()}")
 
         print(f"отправляю запрос")
         response = await session.post(
-            url=f"https://api.runpod.ai/v2/9llhrlx4fxvhr0/runsync/",
+            url=settings.url_ranpod,
             headers={
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {settings.api_key_ranpod}"
         },
             json={
-                "input": {
-                    "prompt": f"Prompt: {prompt}\nВопрос: {message.text}\nКонтекст: {context}",
-                }
+                "prompt": f"Prompt: {prompt}\nВопрос: {message.text}\nКонтекст: {context}",
+                "n": 1,
+                "temperature": 0.8,
+                "max_tokens": 2048
             }
         )
         print(f"отправлен")
         response = await response.json()
         print(f"response llm - {response}")
-        await message.answer(response["output"][0]["choices"][0]['tokens'][0])
+        await message.answer(response["choices"][0]['text'])
 
     except TypeError:
         await message.answer("Nice try!")
