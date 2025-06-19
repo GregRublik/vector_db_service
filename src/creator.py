@@ -24,7 +24,7 @@ documents = load_markdown_documents("data.md")
 # Добавление документов
 manager.add_documents(documents)
 
-# Поиск
-results = manager.similarity_search("расскажи о компании", k=3)
-
-print(results)
+# # Поиск
+# results = manager.similarity_search("расскажи о компании", k=3)
+#
+# print(results)

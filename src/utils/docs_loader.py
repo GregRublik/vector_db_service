@@ -2,11 +2,11 @@ from typing import List
 from langchain_core.documents import Document
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 
-from config import BASE_DIR
+from config import settings
 
 
 def load_markdown_documents(file_path: str) -> List[Document]:
-    text = BASE_DIR / "src" / "docs" / file_path
+    text = settings.base_dir / "src" / "docs" / file_path
 
     splitter = MarkdownHeaderTextSplitter(
         headers_to_split_on=[

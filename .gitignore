@@ -12,3 +12,4 @@ wheels/
 
 .DS_Store
 vector_store
+logs

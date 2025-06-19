@@ -3,7 +3,7 @@ from langchain_core.documents import Document
 from embeddings.factory import EmbeddingFactory
 from vector_stores.faiss import FAISSStore
 from vector_stores.chroma import ChromaStore
-from config import VECTOR_STORE_DIR
+from config import settings
 
 VectorStoreType = Literal["faiss", "chroma"]
 
@@ -43,13 +43,13 @@ class VectorDBManager:
         if vector_store_type == "faiss":
             self.vector_store = FAISSStore(
                 self.embedding,
-                str(VECTOR_STORE_DIR),
+                str(settings.vector_store_dir),
                 store_name
             )
         elif vector_store_type == "chroma":
             self.vector_store = ChromaStore(
                 self.embedding,
-                str(VECTOR_STORE_DIR),
+                str(settings.vector_store_dir),
                 store_name
             )
         else:
