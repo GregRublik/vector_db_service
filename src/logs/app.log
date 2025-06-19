@@ -1,0 +1,40 @@
+2025-06-19 10:53:32,208 - uvicorn.error - INFO - Started server process [6420]
+2025-06-19 10:53:32,208 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-19 10:53:32,208 - uvicorn.error - INFO - Application startup complete.
+2025-06-19 10:53:32,209 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-19 10:54:04,582 - uvicorn.error - INFO - Started server process [6454]
+2025-06-19 10:54:04,582 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-19 10:54:04,582 - uvicorn.error - INFO - Application startup complete.
+2025-06-19 10:54:04,582 - uvicorn.error - ERROR - [Errno 48] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+2025-06-19 10:54:04,582 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-19 10:54:04,582 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-19 10:58:43,990 - uvicorn.error - INFO - Started server process [1007]
+2025-06-19 10:58:43,991 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-19 10:58:43,991 - uvicorn.error - INFO - Application startup complete.
+2025-06-19 10:58:43,991 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-19 10:58:46,058 - uvicorn.access - INFO - 127.0.0.1:49390 - "GET / HTTP/1.1" 404
+2025-06-19 10:58:46,075 - uvicorn.access - INFO - 127.0.0.1:49390 - "GET /favicon.ico HTTP/1.1" 404
+2025-06-19 10:58:52,259 - uvicorn.access - INFO - 127.0.0.1:49391 - "GET /docs HTTP/1.1" 200
+2025-06-19 10:58:52,875 - uvicorn.access - INFO - 127.0.0.1:49391 - "GET /openapi.json HTTP/1.1" 200
+2025-06-19 10:59:11,490 - uvicorn.access - INFO - 127.0.0.1:49399 - "POST /search/ HTTP/1.1" 200
+2025-06-19 10:59:40,748 - uvicorn.access - INFO - 127.0.0.1:49401 - "POST /search/ HTTP/1.1" 200
+2025-06-19 11:00:45,514 - uvicorn.error - INFO - Started server process [1052]
+2025-06-19 11:00:45,515 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-19 11:00:45,515 - uvicorn.error - INFO - Application startup complete.
+2025-06-19 11:00:45,515 - uvicorn.error - ERROR - [Errno 48] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+2025-06-19 11:00:45,515 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-19 11:00:45,515 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-19 11:03:31,196 - uvicorn.error - INFO - Shutting down
+2025-06-19 11:03:31,299 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-19 11:03:31,299 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-19 11:03:31,299 - uvicorn.error - INFO - Finished server process [1007]
+2025-06-19 11:04:28,408 - uvicorn.error - INFO - Started server process [1167]
+2025-06-19 11:04:28,408 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-19 11:04:28,408 - uvicorn.error - INFO - Application startup complete.
+2025-06-19 11:04:28,408 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-19 11:04:47,973 - uvicorn.access - INFO - 127.0.0.1:49454 - "GET /docs HTTP/1.1" 200
+2025-06-19 11:04:48,040 - uvicorn.access - INFO - 127.0.0.1:49454 - "GET /openapi.json HTTP/1.1" 200
+2025-06-19 11:05:05,520 - uvicorn.error - INFO - Shutting down
+2025-06-19 11:05:05,621 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-19 11:05:05,622 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-19 11:05:05,622 - uvicorn.error - INFO - Finished server process [1167]

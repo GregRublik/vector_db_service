@@ -5,7 +5,7 @@ from schemas.faiss import SearchResult, SearchRequest
 import uvicorn
 from creator import manager
 
-# Инициализация FastAPI
+
 app = FastAPI(
     title="VectorDB API",
     description="API для работы с векторной базой данных",
