@@ -61,3 +61,16 @@
 2025-06-19 14:56:51,887 - uvicorn.access - INFO - 127.0.0.1:50403 - "POST /search/ HTTP/1.1" 200
 2025-06-19 14:57:39,081 - uvicorn.access - INFO - 127.0.0.1:50406 - "POST /search/ HTTP/1.1" 200
 2025-06-19 15:00:04,465 - uvicorn.access - INFO - 127.0.0.1:50425 - "POST /search/ HTTP/1.1" 200
+2025-06-19 15:49:11,274 - uvicorn.error - INFO - Shutting down
+2025-06-19 15:49:11,392 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-19 15:49:11,408 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-19 15:49:11,413 - uvicorn.error - INFO - Finished server process [2654]
+2025-06-19 15:59:18,055 - uvicorn.error - INFO - Started server process [5392]
+2025-06-19 15:59:18,055 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-19 15:59:18,056 - uvicorn.error - INFO - Application startup complete.
+2025-06-19 15:59:18,056 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-19 16:00:00,035 - uvicorn.access - INFO - 127.0.0.1:51053 - "POST /search/ HTTP/1.1" 200
+2025-06-19 16:00:27,942 - uvicorn.error - INFO - Shutting down
+2025-06-19 16:00:28,044 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-19 16:00:28,045 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-19 16:00:28,046 - uvicorn.error - INFO - Finished server process [5392]

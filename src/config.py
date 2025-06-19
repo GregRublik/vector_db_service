@@ -30,8 +30,8 @@ class Settings(BaseSettings):
 settings = Settings()
 
 os.environ["TRUST_REMOTE_CODE"] = "true"
-os.environ["HF_HUB_OFFLINE"] = "1"
-os.environ["TRANSFORMERS_OFFLINE"] = "1"
+os.environ["HF_HUB_OFFLINE"] = "0"
+os.environ["TRANSFORMERS_OFFLINE"] = "0"
 
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 # os.environ["HF_HOME"] = str(settings.base_dir / "hf_home")
