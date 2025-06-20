@@ -27,7 +27,7 @@ async def echo_handler(message: Message) -> None:
         print(f"query - {message.text}")
         session = await session_manager.get_session()
         context = await session.post(
-            url=f"http://app:{settings.app_port}/search/",
+            url=f"{settings.app_url}/search/",
             json={
                 "query": f"{message.text}",
                 "k": 2
