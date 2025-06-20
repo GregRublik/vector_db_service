@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     base_dir: Path = Path(__file__).parent.parent
     vector_store_dir: Path = base_dir / "vector_store"
     app_port: int = Field(json_schema_extra={".env": "APP_PORT"})
-    app_host: str = "127.0.0.1"
+    app_host: str = "0.0.0.0"
 
     url_ranpod: str = Field(json_schema_extra={'.env': 'URL_RANPOD'})
     api_key_ranpod: str = Field(json_schema_extra={'.env': 'API_KEY_RANPOD'})
@@ -35,7 +35,7 @@ os.environ["HF_HUB_OFFLINE"] = "0"
 os.environ["TRANSFORMERS_OFFLINE"] = "0"
 
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
-# os.environ["HF_HOME"] = str(settings.base_dir / "hf_home")
+os.environ["HF_HOME"] = str(settings.base_dir / "hf_home")
 
 prompt = """
 Вы — AI-ассистент компании Ave Technologies, специализирующийся на предоставлении точной информации о компании на основе
@@ -46,3 +46,6 @@ prompt = """
 2. Если информация отсутствует в документе — отвечайте "В предоставленных материалах эта информация не указана"
 3. Для запросов о компетенциях ссылайтесь на соответствующие разделы (Миссия, Ценности, Принципы работы)
 """
+
+if __name__ == "__main__":
+    print(os.getenv("HF_HOME"))

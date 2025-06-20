@@ -4,7 +4,7 @@ from config import logger, settings
 from schemas.faiss import SearchResult, SearchRequest
 import uvicorn
 from manager import manager
-
+import os
 
 app = FastAPI(
     title="VectorDB API",
