@@ -10,4 +10,8 @@ graph TD
     C --> E[ChromaStore]
     B --> F[EmbeddingFactory]
     F --> G[HuggingFaceEmbedding]
+    
+    a[API] <--> B
+    
+    a <--> b[bot-aiogram]
 ```

@@ -3,7 +3,7 @@ from typing import List
 from config import logger, settings
 from schemas.faiss import SearchResult, SearchRequest
 import uvicorn
-from creator import manager
+from manager import manager
 
 
 app = FastAPI(

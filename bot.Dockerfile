@@ -11,10 +11,10 @@ WORKDIR /app
 COPY pyproject.toml .
 
 # Устанавливаем зависимости напрямую (без виртуального окружения в контейнере)
-RUN uv pip install . --group bot
+RUN uv pip install --system --group bot
 
 # Копируем остальные файлы проекта
-COPY src/bot.py src/config.py ./
+COPY src/bot.py src/config.py src/session_manager.py ./
 
-# Запускаем оба сервиса
-CMD ["python src/bot.py"]
+## Запускаем оба сервиса
+#CMD ["python src/bot.py"]

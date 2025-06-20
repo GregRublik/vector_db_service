@@ -4,6 +4,7 @@ from embeddings.factory import EmbeddingFactory
 from vector_stores.faiss import FAISSStore
 from vector_stores.chroma import ChromaStore
 from config import settings
+from utils.docs_loader import load_markdown_documents
 
 VectorStoreType = Literal["faiss", "chroma"]
 
@@ -64,3 +65,24 @@ class VectorDBManager:
 
     def load_store(self):
         self.vector_store.load()
+
+
+# Инициализация с FAISS or Chroma
+manager = VectorDBManager(
+    store_name="test_faiss",
+    embedding_type="huggingface",
+    vector_store_type="faiss",
+    embedding_kwargs={
+        "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "model_kwargs": {"device": "cpu"},  # or "cuda"
+    }
+)
+
+# Загрузка документов
+documents = load_markdown_documents("data.md")
+
+# Добавление документов
+manager.add_documents(documents)
+
+# # Поиск
+# results = manager.similarity_search("расскажи о компании", k=3)

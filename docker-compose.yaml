@@ -5,24 +5,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    depends_on:
-      vectordb:
-        condition: service_healthy
-      bot:
-        condition: service_healthy
+    command: ["python", "src/app.py"]
+#    depends_on:
+#      bot:
+#        condition: service_healthy
 
     ports:
       - ${APP_PORT}:${APP_PORT}
-    env_file:
-      - .env
-    networks:
-      - mynetwork
-
-  vectordb:
-    build:
-      context: .
-      dockerfile: vectordb.Dockerfile
-
     env_file:
       - .env
     networks:
@@ -32,17 +21,13 @@ services:
     build:
       context: .
       dockerfile: bot.Dockerfile
+    command: ["python", "bot.py"]
 
     env_file:
       - .env
     networks:
       - mynetwork
 
-
-
 networks:
   mynetwork:
     driver: bridge
-
-volumes:
-  vectordb-data:

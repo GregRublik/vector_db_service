@@ -1850,6 +1850,7 @@ dependencies = [
 [package.dev-dependencies]
 bot = [
     { name = "aiogram" },
+    { name = "loguru" },
     { name = "pydantic" },
     { name = "pydantic-settings" },
     { name = "uvicorn" },
@@ -1875,6 +1876,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 bot = [
     { name = "aiogram", specifier = ">=3.20.0.post0" },
+    { name = "loguru", specifier = ">=0.7.3" },
     { name = "pydantic", specifier = ">=2.11.7" },
     { name = "pydantic-settings", specifier = ">=2.9.1" },
     { name = "uvicorn", specifier = ">=0.34.3" },
