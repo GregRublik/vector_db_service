@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from typing import List
+from typing import List, Dict, Any
 from config import logger, settings
 from schemas.faiss import SearchResult, SearchRequest
 import uvicorn
@@ -22,6 +22,16 @@ async def search_documents(request: SearchRequest):
         return [{"content": doc.page_content, "metadata": doc.metadata} for doc in results]
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/health/", summary="Проверка здоровья сервиса")
+async def health_check() -> Dict[str, Any]:
+    """
+    Проверка работоспособности сервиса.
+    """
+    return {
+        "status": "OK",
+    }
 
 
 if __name__ == "__main__":

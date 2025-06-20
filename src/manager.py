@@ -74,7 +74,7 @@ manager = VectorDBManager(
     vector_store_type="faiss",
     embedding_kwargs={
         "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-        "model_kwargs": {"device": "cuda"},  # or "cuda"
+        "model_kwargs": {"device": "cpu"},  # or "cuda"
     }
 )
 
