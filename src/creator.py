@@ -1,7 +1,7 @@
-from manager import VectorDBManager
+import os
 from utils.docs_loader import load_markdown_documents
 
-import os
+from manager import VectorDBManager
 os.environ["TRUST_REMOTE_CODE"] = "true"
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
@@ -13,7 +13,6 @@ manager = VectorDBManager(
     vector_store_type="faiss",
     embedding_kwargs={
         "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-        # "model_name": "sentence-transformers/all-MiniLM-L6-v2",
         "model_kwargs": {"device": "cpu"},  # or "cuda"
     }
 )
@@ -26,5 +25,4 @@ manager.add_documents(documents)
 
 # # Поиск
 # results = manager.similarity_search("расскажи о компании", k=3)
-#
-# print(results)
+

@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     model_name: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     base_dir: Path = Path(__file__).parent.parent
     vector_store_dir: Path = base_dir / "vector_store"
-    app_port: int = 8000
+    app_port: int = Field(json_schema_extra={".env": "APP_PORT"})
     app_host: str = "127.0.0.1"
 
     url_ranpod: str = Field(json_schema_extra={'.env': 'URL_RANPOD'})
