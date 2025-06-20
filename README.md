@@ -15,3 +15,7 @@ graph TD
     
     a <--> b[bot-aiogram]
 ```
+
+для запуска выполняем команду 
+
+    docker compose up --build
