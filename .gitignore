@@ -15,4 +15,4 @@ vector_store
 src/logs/app.log
 logs/debug.log
 .env
-
+model_cache

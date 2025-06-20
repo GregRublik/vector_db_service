@@ -15,7 +15,7 @@ services:
       - HF_HOME=/cache/huggingface
       - SENTENCE_TRANSFORMERS_HOME=/cache/sentence_transformers
     volumes:
-      - model_cache:/cache  # Подключаем Volume
+      - ./model_cache:/cache
     networks:
       - mynetwork
 
