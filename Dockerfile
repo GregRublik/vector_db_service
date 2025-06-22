@@ -15,6 +15,3 @@ RUN uv pip install --system .
 
 # Копируем остальные файлы проекта
 COPY . .
-
-## Запускаем оба сервиса
-#CMD ["python src/app.py"]

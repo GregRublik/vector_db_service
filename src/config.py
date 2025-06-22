@@ -21,11 +21,14 @@ class Settings(BaseSettings):
 
     app_port: int = Field(json_schema_extra={".env": "APP_PORT"})
     app_url: str = Field(json_schema_extra={".env": "APP_URL"})
-    app_host: str = "0.0.0.0"
+    app_host: str = "localhost"
+    app: str "da"
 
     url_ranpod: str = Field(json_schema_extra={'.env': 'URL_RANPOD'})
     api_key_ranpod: str = Field(json_schema_extra={'.env': 'API_KEY_RANPOD'})
     api_token_telegram: str = Field(json_schema_extra={'.env': 'API_TOKEN_TELEGRAM'})
+
+    log_config_path: str = "src/logs/log_config.json"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
@@ -48,6 +51,3 @@ prompt = """
 2. Если информация отсутствует в документе — отвечайте "В предоставленных материалах эта информация не указана"
 3. Для запросов о компетенциях ссылайтесь на соответствующие разделы (Миссия, Ценности, Принципы работы)
 """
-
-if __name__ == "__main__":
-    print(os.getenv("HF_HOME"))

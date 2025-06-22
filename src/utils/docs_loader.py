@@ -6,7 +6,7 @@ from config import settings
 
 
 def load_markdown_documents(file_path: str) -> List[Document]:
-    text = settings.base_dir / "src" / "docs" / file_path
+    text = settings.base_dir / "docs" / file_path
 
     splitter = MarkdownHeaderTextSplitter(
         headers_to_split_on=[

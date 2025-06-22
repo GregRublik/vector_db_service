@@ -1,5 +1,5 @@
 from langchain_community.vectorstores import FAISS
-from vector_stores.base import VectorStoreInterface
+from services.vectordb.vector_stores.base import VectorStoreInterface
 from utils.decorators import measure_time
 
 

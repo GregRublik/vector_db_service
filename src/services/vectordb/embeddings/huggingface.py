@@ -1,6 +1,6 @@
 from sentence_transformers import SentenceTransformer
 from langchain_huggingface import HuggingFaceEmbeddings
-from embeddings.base import BaseEmbedding
+from services.vectordb.embeddings.base import BaseEmbedding
 
 
 class HuggingFaceEmbedding(BaseEmbedding):

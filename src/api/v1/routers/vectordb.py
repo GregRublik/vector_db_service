@@ -1,7 +1,7 @@
 from fastapi import HTTPException
 from typing import List, Dict, Any
 from api.v1.schemas.faiss import SearchResult, SearchRequest
-from manager import manager
+from services.vectordb.manager import manager
 from fastapi import APIRouter
 
 vectordb = APIRouter()
@@ -20,7 +20,7 @@ async def search_documents(request: SearchRequest):
 
 
 @vectordb.get("/health/", summary="Проверка здоровья сервиса")
-async def health_check() -> Dict[str]:
+async def health_check() -> Dict[str, Any]:
     """
     Проверка работоспособности сервиса.
     """

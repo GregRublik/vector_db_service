@@ -17,7 +17,7 @@ if __name__ == "__main__":
             app,
             host=settings.app_host,
             port=settings.app_port,
-            log_config="src/logs/log_config.json",
+            log_config=settings.log_config_path,
             use_colors=True,
             log_level="info",
             loop="asyncio"

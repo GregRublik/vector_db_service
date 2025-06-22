@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["python", "src/app.py"]
+    command: ["python", "src/main.py"]
 
     ports:
       - ${APP_PORT}:${APP_PORT}

@@ -20,12 +20,14 @@ dp = Dispatcher()
 async def command_start_handler(message: Message) -> None:
     await message.answer(f"Hello, {html.bold(message.from_user.full_name)}, write a request!")
 
-
+print(settings.app)
 @dp.message()
 async def echo_handler(message: Message) -> None:
     try:
         print(f"query - {message.text}")
         session = await session_manager.get_session()
+        print(f"{settings.app_url}/search/")
+
         context = await session.post(
             url=f"{settings.app_url}/search/",
             json={
@@ -34,6 +36,7 @@ async def echo_handler(message: Message) -> None:
             }
         )
         context = await context.json()
+
         print(f"context response - {context}")
 
 
@@ -70,6 +73,7 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
+
 
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     try:

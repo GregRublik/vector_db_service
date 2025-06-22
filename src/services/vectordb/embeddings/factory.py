@@ -1,4 +1,4 @@
-from embeddings.huggingface import HuggingFaceEmbedding
+from services.vectordb.embeddings.huggingface import HuggingFaceEmbedding
 from utils.decorators import measure_time
 from config import logger
 
