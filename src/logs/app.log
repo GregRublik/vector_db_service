@@ -131,3 +131,23 @@
 2025-06-22 23:42:31,850 - uvicorn.access - INFO - 127.0.0.1:55309 - "GET / HTTP/1.1" 404
 2025-06-22 23:42:31,875 - uvicorn.access - INFO - 127.0.0.1:55310 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404
 2025-06-22 23:42:31,953 - uvicorn.access - INFO - 127.0.0.1:55310 - "GET /apple-touch-icon.png HTTP/1.1" 404
+2025-06-23 00:47:48,682 - uvicorn.error - INFO - Started server process [4828]
+2025-06-23 00:47:48,683 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-23 00:47:48,683 - uvicorn.error - INFO - Application startup complete.
+2025-06-23 00:47:48,684 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-06-23 00:48:02,836 - uvicorn.error - INFO - Shutting down
+2025-06-23 00:48:02,939 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-23 00:48:02,940 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-23 00:48:02,940 - uvicorn.error - INFO - Finished server process [4828]
+2025-06-23 01:02:26,590 - uvicorn.error - INFO - Started server process [5103]
+2025-06-23 01:02:26,591 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-23 01:02:26,591 - uvicorn.error - INFO - Application startup complete.
+2025-06-23 01:02:26,592 - uvicorn.error - INFO - Uvicorn running on http://localhost:8000 (Press CTRL+C to quit)
+2025-06-23 01:02:30,060 - uvicorn.access - INFO - ::1:56996 - "GET / HTTP/1.1" 404
+2025-06-23 01:02:55,446 - uvicorn.access - INFO - ::1:57011 - "GET /docs HTTP/1.1" 200
+2025-06-23 01:02:55,910 - uvicorn.access - INFO - ::1:57011 - "GET /openapi.json HTTP/1.1" 200
+2025-06-23 01:03:20,847 - uvicorn.access - INFO - ::1:57014 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-23 01:03:32,185 - uvicorn.error - INFO - Shutting down
+2025-06-23 01:03:32,288 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-23 01:03:32,288 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-23 01:03:32,289 - uvicorn.error - INFO - Finished server process [5103]

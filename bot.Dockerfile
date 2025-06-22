@@ -14,7 +14,4 @@ COPY pyproject.toml .
 RUN uv pip install --system --group bot
 
 # Копируем остальные файлы проекта
-COPY src/bot.py src/config.py src/session_manager.py ./
-
-## Запускаем оба сервиса
-#CMD ["python src/bot.py"]
+COPY src/services/bot.py src/config.py src/utils/session_manager.py ./

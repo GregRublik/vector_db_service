@@ -21,8 +21,7 @@ class Settings(BaseSettings):
 
     app_port: int = Field(json_schema_extra={".env": "APP_PORT"})
     app_url: str = Field(json_schema_extra={".env": "APP_URL"})
-    app_host: str = "localhost"
-    app: str "da"
+    app_host: str = "0.0.0.0"
 
     url_ranpod: str = Field(json_schema_extra={'.env': 'URL_RANPOD'})
     api_key_ranpod: str = Field(json_schema_extra={'.env': 'API_KEY_RANPOD'})
