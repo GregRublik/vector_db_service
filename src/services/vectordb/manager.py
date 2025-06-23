@@ -68,11 +68,11 @@ class VectorDBManager:
 
 # Инициализация с FAISS or Chroma
 manager = VectorDBManager(
-    store_name="test_faiss",
+    store_name="faiss",
     embedding_type="huggingface",
     vector_store_type="faiss",
     embedding_kwargs={
-        "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "model_name": settings.embedding_model,
         "model_kwargs": {"device": "cpu"},  # or "cuda"
     }
 )

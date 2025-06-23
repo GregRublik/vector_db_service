@@ -15,7 +15,7 @@ logger.add(
 )
 
 class Settings(BaseSettings):
-    model_name: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    embedding_model: str = Field(json_schema_extra={".env": "EMBEDDING_MODEL"})
     base_dir: Path = Path(__file__).parent.parent
     vector_store_dir: Path = base_dir / "vector_store"
 
@@ -23,11 +23,11 @@ class Settings(BaseSettings):
     app_url: str = Field(json_schema_extra={".env": "APP_URL"})
     app_host: str = "0.0.0.0"
 
-    url_ranpod: str = Field(json_schema_extra={'.env': 'URL_RANPOD'})
-    api_key_ranpod: str = Field(json_schema_extra={'.env': 'API_KEY_RANPOD'})
+    url_llm_model: str = Field(json_schema_extra={'.env': 'URL_LLM_MODEL'})
+    api_key_llm_model: str = Field(json_schema_extra={'.env': 'API_KEY_LLM_MODEL'})
     api_token_telegram: str = Field(json_schema_extra={'.env': 'API_TOKEN_TELEGRAM'})
 
-    log_config_path: str = "src/logs/log_config.json"
+    log_config_path: str = Field(json_schema_extra={".env": "LOG_CONFIG_PATH"})
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
