@@ -11,7 +11,7 @@ from aiogram.types import Message
 from session_manager import session_manager
 from prompts import base_prompt
 
-from config import settings, prompt
+from config.settings import settings, prompt
 
 
 dp = Dispatcher()
@@ -49,10 +49,10 @@ async def echo_handler(message: Message) -> None:
         )
 
         response = await session.post(
-            url=settings.url_ranpod,
+            url=settings.url_llm_model,
             headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {settings.api_key_ranpod}"
+                "Authorization": f"Bearer {settings.api_key_llm_model}"
         },
             json={
                 "prompt": request.text,#f"Prompt: {prompt}\nВопрос: {message.text}\nКонтекст: {context}",

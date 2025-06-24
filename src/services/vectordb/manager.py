@@ -3,10 +3,11 @@ from langchain_core.documents import Document
 from services.vectordb.embeddings.factory import EmbeddingFactory
 from services.vectordb.vector_stores.faiss import FAISSStore
 from services.vectordb.vector_stores.chroma import ChromaStore
-from config import settings
+from config.settings import settings
 from utils.docs_loader import load_markdown_documents
 
 VectorStoreType = Literal["faiss", "chroma"]
+
 
 class VectorDBManager:
     """

@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from config import logger, settings
+from config.settings import logger, settings
 import uvicorn
 from api.v1.routers.vectordb import vectordb
 

@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["python", "src/main.py"]
 
     ports:
       - ${APP_PORT}:${APP_PORT}
@@ -27,7 +26,6 @@ services:
     build:
       context: .
       dockerfile: bot.Dockerfile
-    command: ["python", "bot.py"]
     env_file:
       - .env
     networks:

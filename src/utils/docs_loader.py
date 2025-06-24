@@ -2,7 +2,7 @@ from typing import List
 from langchain_core.documents import Document
 from langchain_text_splitters import MarkdownHeaderTextSplitter
 
-from config import settings
+from config.settings import settings
 
 
 def load_markdown_documents(file_path: str) -> List[Document]:
