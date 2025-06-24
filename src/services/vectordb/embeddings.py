@@ -1,6 +1,29 @@
+from abc import ABC, abstractmethod
+from utils.decorators import measure_time
+from config.settings import logger
 from sentence_transformers import SentenceTransformer
 from langchain_huggingface import HuggingFaceEmbeddings
-from services.vectordb.embeddings.base import BaseEmbedding
+
+
+class EmbeddingFactory:
+    """
+    Фабрика эмбеддингов
+    """
+
+    @staticmethod
+    @measure_time
+    def create_embedding(embedding_type="huggingface", **kwargs):
+        if embedding_type == "huggingface":
+            logger.info(f"Проверка модели ...")
+            return HuggingFaceEmbedding(**kwargs).get_embedding()
+        else:
+            raise ValueError(f"Unknown embedding type: {embedding_type}")
+
+
+class BaseEmbedding(ABC):
+    @abstractmethod
+    def get_embedding(self):
+        pass
 
 
 class HuggingFaceEmbedding(BaseEmbedding):

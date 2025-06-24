@@ -1,6 +1,6 @@
 from typing import List, Literal
 from langchain_core.documents import Document
-from services.vectordb.embeddings.factory import EmbeddingFactory
+from services.vectordb.embeddings import EmbeddingFactory
 from services.vectordb.vector_stores.faiss import FAISSStore
 from services.vectordb.vector_stores.chroma import ChromaStore
 from config.settings import settings
