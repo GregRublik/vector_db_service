@@ -9,9 +9,9 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 
 from session_manager import session_manager
-from prompts import base_prompt
 
-from config.settings import settings, prompt
+from settings import settings
+from prompts import prompt, base_prompt
 
 
 dp = Dispatcher()
