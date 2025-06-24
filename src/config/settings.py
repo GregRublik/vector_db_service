@@ -17,12 +17,12 @@ logger.add(
 
 class Settings(BaseSettings):
     embedding_model: str = Field(json_schema_extra={".env": "EMBEDDING_MODEL"})
-    base_dir: Path = Path(__file__).parent.parent
+    base_dir: Path = Path(__file__).parent.parent.parent
     vector_store_dir: Path = base_dir / "vector_store"
 
     app_port: int = Field(json_schema_extra={".env": "APP_PORT"})
     app_url: str = Field(json_schema_extra={".env": "APP_URL"})
-    app_host: str = "0.0.0.0"
+    app_host: str = Field(json_schema_extra={".env": "APP_HOST"})
 
     url_llm_model: str = Field(json_schema_extra={'.env': 'URL_LLM_MODEL'})
     api_key_llm_model: str = Field(json_schema_extra={'.env': 'API_KEY_LLM_MODEL'})
