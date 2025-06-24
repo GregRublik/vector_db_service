@@ -9,6 +9,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 
 from session_manager import session_manager
+from prompts import base_prompt
 
 from config import settings, prompt
 
@@ -38,6 +39,15 @@ async def echo_handler(message: Message) -> None:
 
         print(f"context response - {context}")
 
+        request = base_prompt.invoke(
+            {
+                "context": context,
+                "metadata": "metadata",
+                "question": message.text,
+
+            },
+        )
+
         response = await session.post(
             url=settings.url_ranpod,
             headers={
@@ -45,7 +55,7 @@ async def echo_handler(message: Message) -> None:
                 "Authorization": f"Bearer {settings.api_key_ranpod}"
         },
             json={
-                "prompt": f"Prompt: {prompt}\nВопрос: {message.text}\nКонтекст: {context}",
+                "prompt": request.text,#f"Prompt: {prompt}\nВопрос: {message.text}\nКонтекст: {context}",
                 "n": 1,
                 "temperature": 0.8,
                 "max_tokens": 2048

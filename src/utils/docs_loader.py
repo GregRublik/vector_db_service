@@ -19,7 +19,12 @@ def load_markdown_documents(file_path: str) -> List[Document]:
 
     documents = []
     for chunk in chunks:
-        doc = f"Тема: {chunk.metadata['topic']}\nОписание: {chunk.metadata.get('subtopic')}\nИнформация:{chunk.page_content}"
+        doc = f"""
+Документ: {file_path}
+Тема: {chunk.metadata['topic']}
+Описание: {chunk.metadata.get('subtopic')}
+Информация:{chunk.page_content}"""
+        chunk.metadata['document_name'] = file_path
         documents.append(Document(doc.lower(), metadata=chunk.metadata))
 
     return documents

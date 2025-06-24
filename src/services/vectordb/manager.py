@@ -77,11 +77,11 @@ manager = VectorDBManager(
     }
 )
 
-# Загрузка документов
-documents = load_markdown_documents("data.md")
+list_documents = {
+    "Company Description - AVE Technologies.md": load_markdown_documents
+}
 
-# Добавление документов
-manager.add_documents(documents)
-
-# # Поиск
-# results = manager.similarity_search("расскажи о компании", k=3)
+for name, func in list_documents.items():
+    # Загрузка документов
+    documents = func(name)
+    manager.add_documents(documents)

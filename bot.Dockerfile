@@ -14,4 +14,11 @@ COPY pyproject.toml .
 RUN uv pip install --system --group bot
 
 # Копируем остальные файлы проекта
+<<<<<<< Updated upstream
 COPY src/services/bot.py src/config.py src/utils/session_manager.py ./
+=======
+COPY src/services/bot.py src/config.py src/utils/session_manager.py src/configs/prompts.py ./
+
+# Запуск бота
+CMD python bot.py
+>>>>>>> Stashed changes
