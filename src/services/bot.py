@@ -25,24 +25,24 @@ async def command_start_handler(message: Message) -> None:
 @dp.message()
 async def echo_handler(message: Message) -> None:
     try:
-        print(f"query - {message.text}")
+
         session = await session_manager.get_session()
 
         context = await session.post(
             url=f"{settings.app_url}/api/v1/vectordb/search/",
             json={
                 "query": f"{message.text}",
-                "k": 2
+                "k": 5
             }
         )
         context = await context.json()
 
-        print(f"context response - {context}")
+        message_answer = await message.answer("Запрос в обработке....")
 
         request = base_prompt.invoke(
             {
-                "context": context,
-                "metadata": "metadata",
+                "context": context[0]['content'],
+                "metadata": context[0]["metadata"],
                 "question": message.text,
 
             },
@@ -55,19 +55,19 @@ async def echo_handler(message: Message) -> None:
                 "Authorization": f"Bearer {settings.api_key_llm_model}"
         },
             json={
-                "prompt": request.text,#f"Prompt: {prompt}\nВопрос: {message.text}\nКонтекст: {context}",
+                "prompt": request.text,
                 "n": 1,
                 "temperature": 0.8,
                 "max_tokens": 2048
             }
         )
-        print(f"отправлен")
-        response = await response.json()
-        print(f"response llm - {response}")
-        await message.answer(response["choices"][0]['text'])
 
+        response = await response.json()
+
+        await message.answer(response["choices"][0]['text'])
+        await message_answer.delete()
     except TypeError:
-        await message.answer("Nice try!")
+        await message.answer("Во время обработки запроса произошла ошибка...")
 
 
 async def main() -> None:

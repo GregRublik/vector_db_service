@@ -167,3 +167,97 @@
 2025-06-23 09:52:00,588 - uvicorn.error - INFO - Waiting for application shutdown.
 2025-06-23 09:52:00,588 - uvicorn.error - INFO - Application shutdown complete.
 2025-06-23 09:52:00,589 - uvicorn.error - INFO - Finished server process [1979]
+2025-06-25 16:26:19,924 - uvicorn.error - INFO - Started server process [18009]
+2025-06-25 16:26:19,924 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 16:26:19,925 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 16:26:19,925 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-06-25 16:26:27,611 - uvicorn.error - INFO - Shutting down
+2025-06-25 16:26:27,713 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 16:26:27,713 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 16:26:27,714 - uvicorn.error - INFO - Finished server process [18009]
+2025-06-25 19:30:00,201 - uvicorn.error - INFO - Started server process [18433]
+2025-06-25 19:30:00,201 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 19:30:00,201 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 19:30:00,201 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-25 19:32:35,876 - uvicorn.access - INFO - 127.0.0.1:59530 - "POST //api/v1/vectordb/search/ HTTP/1.1" 404
+2025-06-25 19:37:08,763 - uvicorn.access - INFO - 127.0.0.1:59557 - "POST //api/v1/vectordb/search/ HTTP/1.1" 404
+2025-06-25 19:37:34,802 - uvicorn.error - INFO - Shutting down
+2025-06-25 19:37:34,905 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 19:37:34,906 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 19:37:34,907 - uvicorn.error - INFO - Finished server process [18433]
+2025-06-25 19:37:48,721 - uvicorn.error - INFO - Started server process [18602]
+2025-06-25 19:37:48,723 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 19:37:48,723 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 19:37:48,723 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-25 19:38:04,006 - uvicorn.access - INFO - 127.0.0.1:59573 - "POST //api/v1/vectordb/search/ HTTP/1.1" 404
+2025-06-25 19:39:53,873 - uvicorn.access - INFO - 127.0.0.1:59583 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:45:22,953 - uvicorn.access - INFO - 127.0.0.1:59619 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:48:49,484 - uvicorn.access - INFO - 127.0.0.1:59666 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:49:34,844 - uvicorn.access - INFO - 127.0.0.1:59674 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:50:10,845 - uvicorn.access - INFO - 127.0.0.1:59682 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:51:54,717 - uvicorn.error - INFO - Shutting down
+2025-06-25 19:51:54,822 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 19:51:54,824 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 19:51:54,824 - uvicorn.error - INFO - Finished server process [18602]
+2025-06-25 19:52:09,940 - uvicorn.error - INFO - Started server process [18892]
+2025-06-25 19:52:09,941 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 19:52:09,941 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 19:52:09,941 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-25 19:52:26,686 - uvicorn.access - INFO - 127.0.0.1:59700 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:53:42,137 - uvicorn.access - INFO - 127.0.0.1:59710 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:54:13,519 - uvicorn.access - INFO - 127.0.0.1:59716 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:55:06,386 - uvicorn.access - INFO - 127.0.0.1:59724 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:57:52,298 - uvicorn.access - INFO - 127.0.0.1:59747 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 19:59:30,038 - uvicorn.access - INFO - 127.0.0.1:59760 - "GET / HTTP/1.1" 404
+2025-06-25 19:59:33,028 - uvicorn.access - INFO - 127.0.0.1:59760 - "GET / HTTP/1.1" 404
+2025-06-25 19:59:35,063 - uvicorn.access - INFO - 127.0.0.1:59760 - "GET / HTTP/1.1" 404
+2025-06-25 19:59:35,854 - uvicorn.access - INFO - 127.0.0.1:59760 - "GET /docs HTTP/1.1" 200
+2025-06-25 19:59:36,246 - uvicorn.access - INFO - 127.0.0.1:59760 - "GET /openapi.json HTTP/1.1" 200
+2025-06-25 19:59:37,336 - uvicorn.access - INFO - 127.0.0.1:59760 - "GET /docs HTTP/1.1" 200
+2025-06-25 19:59:37,358 - uvicorn.access - INFO - 127.0.0.1:59760 - "GET /openapi.json HTTP/1.1" 200
+2025-06-25 19:59:54,323 - uvicorn.access - INFO - 127.0.0.1:59764 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:01:40,844 - uvicorn.error - INFO - Shutting down
+2025-06-25 20:01:40,948 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 20:01:40,950 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 20:01:40,950 - uvicorn.error - INFO - Finished server process [18892]
+2025-06-25 20:02:00,224 - uvicorn.error - INFO - Started server process [19139]
+2025-06-25 20:02:00,225 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 20:02:00,225 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 20:02:00,226 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-25 20:02:05,077 - uvicorn.access - INFO - 127.0.0.1:59774 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:02:34,711 - uvicorn.error - INFO - Shutting down
+2025-06-25 20:02:34,813 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 20:02:34,814 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 20:02:34,815 - uvicorn.error - INFO - Finished server process [19139]
+2025-06-25 20:03:21,951 - uvicorn.error - INFO - Started server process [19176]
+2025-06-25 20:03:21,951 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 20:03:21,951 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 20:03:21,952 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-25 20:03:28,330 - uvicorn.access - INFO - 127.0.0.1:59819 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:04:16,476 - uvicorn.error - INFO - Shutting down
+2025-06-25 20:04:16,579 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 20:04:16,580 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 20:04:16,581 - uvicorn.error - INFO - Finished server process [19176]
+2025-06-25 20:04:29,290 - uvicorn.error - INFO - Started server process [19214]
+2025-06-25 20:04:29,291 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 20:04:29,291 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 20:04:29,291 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-25 20:05:15,208 - uvicorn.error - INFO - Shutting down
+2025-06-25 20:05:15,311 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 20:05:15,312 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 20:05:15,312 - uvicorn.error - INFO - Finished server process [19214]
+2025-06-25 20:05:29,932 - uvicorn.error - INFO - Started server process [19249]
+2025-06-25 20:05:29,934 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 20:05:29,934 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 20:05:29,934 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-25 20:05:54,824 - uvicorn.access - INFO - 127.0.0.1:59834 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:08:18,132 - uvicorn.access - INFO - 127.0.0.1:59846 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:09:14,237 - uvicorn.access - INFO - 127.0.0.1:59858 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:10:58,459 - uvicorn.access - INFO - 127.0.0.1:59874 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:11:39,852 - uvicorn.access - INFO - 127.0.0.1:59880 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:21:14,758 - uvicorn.access - INFO - 127.0.0.1:59926 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:22:08,484 - uvicorn.access - INFO - 127.0.0.1:59932 - "POST /api/v1/vectordb/search/ HTTP/1.1" 200
+2025-06-25 20:27:09,488 - uvicorn.error - INFO - Shutting down
+2025-06-25 20:27:09,593 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 20:27:09,595 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 20:27:09,595 - uvicorn.error - INFO - Finished server process [19249]

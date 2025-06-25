@@ -16,17 +16,17 @@ async def search_documents(request: SearchRequest):
     try:
         results = manager.similarity_search(request.query, k=request.k)
 
-        results_reranked = retriever.process_search_results(
+        results = retriever.process_search_results(
             query=request.query,
             search_results=results,
             rerank=True,
-            top_k=3
+            top_k=1
         )
 
-        print(f"retriever result - {results_reranked}")
+        print(f"retriever result - {results}")
         # return results_reranked
 
-        return [{"content": doc.page_content, "metadata": doc.metadata} for doc in results_reranked]
+        return [{"content": doc.page_content, "metadata": doc.metadata} for doc in results]
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

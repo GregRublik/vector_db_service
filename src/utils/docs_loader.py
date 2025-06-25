@@ -20,7 +20,6 @@ def load_markdown_documents(file_path: str) -> List[Document]:
     documents = []
     for chunk in chunks:
         doc = f"""
-Документ: {file_path}
 Тема: {chunk.metadata['topic']}
 Описание: {chunk.metadata.get('subtopic')}
 Информация:{chunk.page_content}"""
