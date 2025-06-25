@@ -36,6 +36,7 @@ class SessionManager:
 
 class Settings(BaseSettings):
     embedding_model: str = Field(json_schema_extra={".env": "EMBEDDING_MODEL"})
+    rerank_model_name: str = Field(json_schema_extra={".env": "RERANK_MODEL_NAME"})
     base_dir: Path = Path(__file__).parent.parent.parent
     vector_store_dir: Path = base_dir / "vector_store"
 
