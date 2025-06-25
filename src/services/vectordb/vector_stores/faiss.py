@@ -14,12 +14,12 @@ class FAISSStore(VectorStoreInterface):
     """
     def __init__(self, embedding, store_path, store_name):
         """
-        Инициализирует хранилище ChromaDB.
+        Инициализирует хранилище FAISS.
 
         Args:
             embedding: Модель для создания эмбеддингов текста.
             store_path (str): Путь для сохранения/загрузки данных.
-            collection_name (str): Название коллекции документов.
+            store_name (str): Название коллекции документов.
         """
         self.embedding = embedding
         self.store_path = store_path
@@ -29,7 +29,7 @@ class FAISSStore(VectorStoreInterface):
     @measure_time
     def add_documents(self, documents):
         """
-        Добавляет документы в хранилище ChromaDB.
+        Добавляет документы в хранилище FAISS.
 
         Если хранилище не инициализировано, создает новую коллекцию.
         Если хранилище уже существует, добавляет документы в существующую коллекцию.
@@ -68,11 +68,14 @@ class FAISSStore(VectorStoreInterface):
     def load(self):
         """
         Загружает ранее сохраненное хранилище с диска.
-        Если хранилище не существует, инициализирует пустое состояние.
+        Если хранилище не существует, оставляет self.store как None.
         """
-        self.store = FAISS.load_local(
-            self.store_path,
-            self.store_name,
-            self.embedding,
-            allow_dangerous_deserialization=True
-        )
+        try:
+            self.store = FAISS.load_local(
+                self.store_path,
+                self.store_name,
+                self.embedding,
+                allow_dangerous_deserialization=True
+            )
+        except (FileNotFoundError, RuntimeError):
+            self.store = None
